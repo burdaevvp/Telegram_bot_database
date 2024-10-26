@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="025b3acc-cbab-4b86-837a-f61bf51cd96c" name="local_database" url="http://local">
+        <fileTransfer mountedRoot="C:\WebServer_Php7_Database\home\localhost\www" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
