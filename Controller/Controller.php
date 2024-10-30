@@ -1,9 +1,11 @@
-<?php 
-	namespace Controller;
+<?php
 
-use \Database\Connect;
+namespace Controller;
 
-abstract class Controller {
+//use Database\MysqlConnect;
+use Database\Connect;
+
+class Controller {
 
     private $data;
 
@@ -12,15 +14,20 @@ abstract class Controller {
         $this->data = [];
     }
 
-    protected function loadModel($title, $alias = "") {
-        if($alias === "") {
+    public function loadModel($title, $alias = "") {
+        if ($alias == "") {
             $alias = $title;
         }
-
         $className = "\\Model\\" . $title;
 
+     //   echo "cont_000";echo $className; exit;
+
         $this->{$alias} = new $className();
+
+       // new MysqlConnect();
+   //var_dump(Connect::getInstance());exit;
         $this->{$alias}->setConnect(Connect::getInstance());
+
     }
 
     protected function data($variable, $data) {
@@ -31,9 +38,7 @@ abstract class Controller {
         foreach($this->data as $variable => $data) {
             $$variable = $data;
         }
-
-        //include_once($_SERVER["DOCUMENT_ROOT"] . "/View/" . $title . ".php");
-        include $_SERVER['DOCUMENT_ROOT'] . "/View/" . $title . ".php";
+        
+        include_once($_SERVER["DOCUMENT_ROOT"] . "/View/" . $title . ".php");
     }
 }
-?>

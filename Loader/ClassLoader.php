@@ -23,21 +23,11 @@ class ClassLoader {
 
     public function load($name) {
         file_put_contents($_SERVER["DOCUMENT_ROOT"] . "/logs/loaders.log", $_SERVER["DOCUMENT_ROOT"] . "/" . str_replace("\\", "/", $name) . ".php\n", FILE_APPEND);
-      //  include_once($_SERVER["DOCUMENT_ROOT"] . "/" . str_replace("\\", "/", $name) . ".php");
-        //include_once($_SERVER["DOCUMENT_ROOT"] . "/" . str_replace("\\", "/", $name) . ".php");
-       // $g_site_root = $_SERVER['DOCUMENT_ROOT'] . "/" . str_replace("\\", "/", $name) . ".php";
-         //   $_SERVER['DOCUMENT_ROOT'] . "/Loader/ClassLoader.php";
-        echo $name;//exit;
-       // include_once($_SERVER["DOCUMENT_ROOT"] . "/" . str_replace("\\", "/", $name) . ".php");
-       // $file = dirname(__FILE__) . DIRECTORY_SEPARATOR .str_replace("\\", "/", $name) . ".php";
-       // echo $file;exit;
-        //include_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . $name);
+     //   echo $name;//exit;
         $g_site_root = $_SERVER["DOCUMENT_ROOT"] . "/" . str_replace("\\", "/", $name) . ".php";
-        //dirname(__FILE__) . DIRECTORY_SEPARATOR . $name;
-        echo $g_site_root;
+      //  echo $g_site_root;echo ' <br>';
         include_once($g_site_root);//exit;
-        //include $_SERVER['DOCUMENT_ROOT'] . "/" . str_replace("\\", "/", $name) . ".php";
-        //include $_SERVER['DOCUMENT_ROOT'] . "/Loader/ClassLoader.php";
+      //  echo '* 9 *  <br>';
     }
 }
 ?>

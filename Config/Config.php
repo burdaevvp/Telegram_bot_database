@@ -12,10 +12,9 @@ class Config {
         return [
             "class" => "\\Database\\MysqlConnect",
             "host" => "localhost",
-            "database" => "it_cluster",
-            "port" => 8080, //3306,
-            "username" => "u_it_cluster",
-            "password" => "root",//"8TrsAcJo",
+            "database" =>"shop",
+            "username" => "root",
+            "password" => "root",
             "charset" => "utf8mb4",
         ];
     }
