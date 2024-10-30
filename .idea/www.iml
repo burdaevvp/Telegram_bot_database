@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Tools/phpmyadmin" isTestSource="false" packagePrefix="PMA" />
+      <sourceFolder url="file://$MODULE_DIR$/Tools/phpmyadmin/libraries" isTestSource="false" packagePrefix="PMA" />
+      <sourceFolder url="file://$MODULE_DIR$/Tools/phpmyadmin/libraries" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tools/phpmyadmin/libraries/classes" isTestSource="false" packagePrefix="PhpMyAdmin" />
+      <sourceFolder url="file://$MODULE_DIR$/Tools/phpmyadmin/libraries/plugins/auth/recaptcha" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tools/phpmyadmin/libraries/sql-parser/src" isTestSource="false" packagePrefix="SqlParser" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
