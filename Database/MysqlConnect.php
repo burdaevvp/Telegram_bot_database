@@ -10,15 +10,11 @@ class MysqlConnect implements Connectable {
     public function __construct(){
         $config = Config::getDatabase();
 
-//        $this->connect = mysqli_connect($config["host"], $config["username"],
-//            $config["password"], $config["database"], $config["port"]);
 
         $this->connect = mysqli_connect($config["host"],
             $config["username"], $config["password"], $config["database"]);
 
-  //      echo $config["host"];echo "<br>"; echo $config["username"];echo "<br>";
-  //      echo $config["password"]; echo "<br>"; echo $config["database"];
-   //     $conn = new mysqli($servername, $username, $password, $dbname);
+
 
         if(mysqli_connect_error()){
             throw new Exception("Failed mysql connect.");
